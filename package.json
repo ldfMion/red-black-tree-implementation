@@ -1,0 +1,27 @@
+{
+    "type": "module",
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.1.2"
+    },
+    "scripts": {
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    },
+    "dependencies": {
+        "typescript": "^5.4.5"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.(mt|t|cj|j)s$": [
+              "ts-jest",
+              {
+                "useESM": true
+              }
+            ]
+          },
+        "extensionsToTreatAsEsm": [
+            ".ts"
+        ]
+    }
+}
